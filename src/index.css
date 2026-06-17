@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-300 font-sans antialiased text-[#EDEDED] bg-[#0A0A0A] dark:text-[#EDEDED] dark:bg-[#0A0A0A];
+    line-height: 1.6;
+  }
+  
+  /* Smooth custom scrolling behaviour */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Subtle scrollbar customizations */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-[#0A0A0A];
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-800 rounded-full hover:bg-zinc-700;
+  }
+}
+
+/* Animations and glassmorphic microscale styles matching Elegant Dark theme */
+.glass-panel {
+  @apply bg-zinc-900/50 backdrop-blur-md border border-zinc-800/80;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-zinc-200 to-zinc-400;
+}
+
+.text-gradient-purple {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+}
+
+.text-gradient-creative {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-teal-400 to-purple-400;
+}
+
